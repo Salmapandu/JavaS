@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice 02</title>
+    <script>
+        // document.addEventListener('DOMContentLoaded',function(){
+        //     document.querySelectorAll('button').forEach(function(button){
+        //         button.onclick=function(){
+        //             document.querySelector('#hello').style.color=button.dataset.color;
+        //         }
+        //     });
+        // });
+        //same thing but with arrow function
+        document.addEventListener('DOMContentLoaded',()=>{
+            document.querySelectorAll('button').forEach(button=>{
+                button.onclick=()=>{
+                    document.querySelector('#hello').style.color=button.dataset.color;
+                }
+            });
+        });
+
+        /*document.addEventListener('DOMContentLoaded',function(){
+            document.querySelector('form').onsubmit=function(){
+                const names = document.querySelector('#name').value;
+                alert(`Hi! ${names} Welcome to the paradise`);
+            };
+        });*/
+        // same thing but with arrow function
+        document.addEventListener('DOMContentLoaded',()=>{
+            document.querySelector('form').onsubmit=()=>{
+                const names = document.querySelector('#name').value;
+                alert(`Hi! ${names} Welcome to the paradise`);
+            };
+        });
+    </script>
+</head>
+<body>
+    <h1 id="hello">Hello</h1>
+    <button data-color="pink" >Pink</button>
+    <button data-color="yellow" >Yellow</button>
+    <button data-color="purple">Purple</button>
+    <button data-color="cyan">Cyan</button>
+    <button data-color="maroon">Maroon</button>
+    <br><br>
+    <form action="">
+        <input type="text" id="name" placeholder="name"><input type="button" value="submit">
+    </form>
+</body>
+</html>
